@@ -5,10 +5,11 @@ import { HttpModule } from '@angular/http';
 
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryStoreService } from './api/in-memory-store.service';
+import './core/rxjs-extensions';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/homepage/homepage.component';
-import { TvShowsService } from './services/tvShows.service';
+import { TvShowService } from './services/tvShows.service';
 
 @NgModule({
   imports: [
@@ -20,6 +21,9 @@ import { TvShowsService } from './services/tvShows.service';
   declarations: [
     AppComponent,
     HomeComponent
+  ],
+  providers: [
+    TvShowService
   ],
   bootstrap: [ AppComponent ]
 })
