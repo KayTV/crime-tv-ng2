@@ -1,6 +1,6 @@
 export class InMemoryStoreService {
 
-  creatDb() {
+  createDb() {
     let tv_shows = [
       {
         'id': 1,
