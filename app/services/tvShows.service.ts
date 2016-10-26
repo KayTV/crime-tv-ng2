@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 
-import { TvShows } from '../models/tv-shows';
+import { TvShow } from '../models/tv-shows';
 import { CONFIG } from '../core/config';
 
 @Injectable()
@@ -11,7 +11,7 @@ export class TvShowService {
 
   constructor( private http : Http ) {}
 
-  getTvShows() : Observable<TvShows[]> {
+  getTvShows() : Observable<TvShow[]> {
     return this.http.get(this.tvshowurl)
       .map((res: Response) => res.json())
   }
