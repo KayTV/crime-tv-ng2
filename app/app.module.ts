@@ -9,6 +9,7 @@ import './core/rxjs-extensions';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/homepage/homepage.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 import { TvShowService } from './services/tvShows.service';
 
 @NgModule({
@@ -20,7 +21,8 @@ import { TvShowService } from './services/tvShows.service';
   ],
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    NavbarComponent
   ],
   providers: [
     TvShowService
