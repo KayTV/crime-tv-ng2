@@ -7,7 +7,7 @@ import { TvShow } from '../../models/tv-shows';
   template: `
     <div *ngFor ='let tvshow of tvshows'>
       <p>{{tvshow.name}}</p>
-    </div>  
+    </div>
   `
 })
 
@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit {
 
   getTvShows() {
     this.tvShowService.getTvShows()
-      .subscribe(res => this.tvshows)
+      .subscribe(tvshows => this.tvshows = tvshows)
   }
 
   ngOnInit() {

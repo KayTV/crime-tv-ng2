@@ -13,7 +13,15 @@ export class TvShowService {
 
   getTvShows() : Observable<TvShow[]> {
     return this.http.get(this.tvshowurl)
-      .map((res: Response) => res.json())
+      .map(this.extractData)
+  }
+
+  private extractData (res: Response) {
+    if (res.status < 200 || res.status >= 300) {
+      throw new Error('Bad response status: ' + res.status);
+    }
+    let body = res.json ? res.json() : null;
+    return (body && body.data || {});
   }
 
 }
