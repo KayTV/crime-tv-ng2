@@ -4,17 +4,33 @@ export class InMemoryStoreService {
     let tv_shows = [
       {
         'id': 1,
-        'name': 'Bones'
+        'name': 'Bones',
+        'description': '',
+        'showtime': ''
       },
       {
         'id': 2,
-        'name': 'Criminal Minds'
+        'name': 'Criminal Minds',
+        'description': '',
+        'showtime': ''
       },
       {
         'id': 3,
-        'name': 'NCIS'
+        'name': 'NCIS',
+        'description': '',
+        'showtime': ''
       }
     ];
-    return { tv_shows };
+    let research = [
+      {
+        'id': 1,
+        'name': ''
+      },
+      {
+        'id': 2,
+        'name': ''
+      }
+    ]
+    return { tv_shows, research };
   }
 }
