@@ -12,7 +12,7 @@ export class InMemoryStoreService {
         'id': 2,
         'name': 'Criminal Minds',
         'description': '',
-        'showtime': ''
+        'showtime': 'usually night time, sometimes all day marathons'
       },
       {
         'id': 3,
